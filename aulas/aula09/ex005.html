@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background: aquamarine;
+            color:white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="nmg">Clique em mim 2</div>
+    <script>
+        var p1= document.getElementsByTagName('p')[0] 
+        var p2= document.getElementsByTagName('p')[1]
+        /*
+        primeiro paragrafo sera paragrafo 0 e assim sucessivamente 
+        */
+        document.write('Esta escrito assim no primeiro paragrafo: ' + p1.innerText + '<br/>') //innerText - texto que esta dentro do paragrafo
+        document.write(p2.innerHTML) // innerHTML - para aparecer o paragrafo modificado em negrito 
+        /*
+        var d= document.getElementById('msg')// atribuimos div para var d, simplificando para alterações
+        d.style.background = 'black' 
+        */
+        //d.innerText = 'Estou aguardando...'  -> muda a frase de dentro da div por JS usando DOM
+        //document.getElementById('msg').innerText = 'Estou aguardando...' // modificamos da mesma maneira a cima (com codigo completo)
+        // seleção por nome (quase a mesma coisa)(Marca, ID, Nome, Classe e Seletor)
+        var c= document.getElementsByName('nmg')[0]
+        c.style.background = 'green'
+        // querySelector() ou querySelectorAll()
+        var d = document.querySelector('div#msg') // id - #  class - .
+        d.style.color = 'blue'
+        d.style.background = 'white'
+    </script>
+</body>
+</html>

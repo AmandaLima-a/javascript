@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS</title>
+</head>
+<body>
+    <h1>Sistema Nacionalidade</h1>
+    Em qual país você nasceu (EUA / Brasil)? <input type="text" name="" id="">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+    <script>
+        function nacionalidade() {
+            var nac = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            if (nac != EUA) {
+                res.innerHTML += '<p>Você é brasileiro.</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
